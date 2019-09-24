@@ -31,3 +31,13 @@
     transform: rotate(360deg);
   }
 }
+
+.shadow {
+  background-color: #ffffff;
+  box-shadow: rgba(204, 204, 204, 0.35) 2px 2px 5px;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  padding: 0px 23px;
+}
