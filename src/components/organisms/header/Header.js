@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyledHeader, Container, HeaderLogo } from "./styles";
+import { StyledHeader, HeaderLogo } from "./styles";
 import Navbar from "../../molecules/navbar/Navbar";
 import { MenuItem } from "../../molecules/navbar/styles";
 import logo from "../../../res/img/logo.png";
@@ -31,7 +31,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <StyledHeader className={`${this.state.activeClass}`}>
+      <StyledHeader className={`${this.state.activeClass} header`}>
         <HeaderLogo>
           <img src={logo} alt="Rocketlab Logo" height="25" />
         </HeaderLogo>

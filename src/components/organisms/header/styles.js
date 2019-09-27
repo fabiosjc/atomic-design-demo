@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
   height: 80px;
   position: fixed;
   top: 0;
-  background: #182258;
+  ${"" /* background: #182258; */}
   color: white;
   column-count: 3;
 `;
