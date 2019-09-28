@@ -1,15 +1,11 @@
 import styled from "styled-components";
-import imagePlaceholder from "../../../res/img/placeholders/1280x720.png";
 
 const DEFAULT_HEIGHT = "40em";
 
 const HeroContainer = styled.div`
   display: block;
   min-height: ${props => (props.height ? props.height : DEFAULT_HEIGHT)};
-  background: ${props =>
-      props.backgroundUrl
-        ? `url(${props.imageUrl})`
-        : `url('${imagePlaceholder}')`}
+
     center;
 
   img.hero-image {
@@ -35,6 +31,6 @@ const HeroContainer = styled.div`
   }
 `;
 
-const MainContent = styled.main``;
 
-export { HeroContainer, MainContent };
+
+export { HeroContainer };

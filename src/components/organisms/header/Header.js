@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { StyledHeader, HeaderLogo } from "./styles";
 import Navbar from "../../molecules/navbar/Navbar";
-import { MenuItem } from "../../molecules/navbar/styles";
 import logo from "../../../res/img/logo.png";
+import Logo from "../../atoms/logo/logo";
 
 export default class Header extends Component {
   constructor(props) {
@@ -30,17 +30,13 @@ export default class Header extends Component {
   }
 
   render() {
+    const {height=25} = this.props
     return (
       <StyledHeader className={`${this.state.activeClass} header`}>
         <HeaderLogo>
-          <img src={logo} alt="Rocketlab Logo" height="25" />
+          <Logo src={logo} height={height} alt="Rocketlab Logo"/>
         </HeaderLogo>
-        <Navbar>
-          <MenuItem>Services</MenuItem>
-          <MenuItem>Work</MenuItem>
-          <MenuItem>Blog</MenuItem>
-          <MenuItem>Contact</MenuItem>
-        </Navbar>
+        <Navbar menuItems={this.props.menuItems} />
       </StyledHeader>
     );
   }

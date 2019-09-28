@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 3;
   transition: padding 0.2s linear, background-color 0.2s linear;
-  box-shadow: 2px 2px 5px rgba(204, 204, 204, 0.349);
+  ${"" /* box-shadow: 2px 2px 5px rgba(204, 204, 204, 0.349); */}
   height: 80px;
   position: fixed;
   top: 0;

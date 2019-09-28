@@ -1,17 +1,15 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import { StyledMenu, MenuItem } from "./styles";
+import React, { Component } from "react";
+import { StyledMenu, MenuItem} from "./styles";
+import Link from "../../atoms/link/link";
 
 export default class Navbar extends Component {
-  static propTypes = {
-    prop: PropTypes
-  };
 
   render() {
+    const {menuItems = [{name: 'Menu Item', route: "#"}]} = this.props
     return (
-      <StyledMenu>
-        {this.props.children.map(menuItem => {
-          return menuItem;
+      <StyledMenu >
+        {menuItems.map(menuItem => {
+          return <MenuItem><Link href={menuItem.route|| '#'}>{menuItem.name}</Link></MenuItem>;
         })}
       </StyledMenu>
     );

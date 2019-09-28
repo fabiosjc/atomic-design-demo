@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { HeroContainer } from "./styles";
+import imagePlaceholder from "../../../res/img/placeholders/1280x720.png";
 
 export default class Hero extends Component {
   static propTypes = {
@@ -11,7 +12,7 @@ export default class Hero extends Component {
   constructor(props) {
     super(props);
     const {
-      imageUrl = "../../res/img/placeholders/1280x720.png",
+      imageUrl = imagePlaceholder,
       text = "Hello World"
     } = this.props;
 
