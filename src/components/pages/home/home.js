@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from "react";
-import Homepage from "../../templates/homepage/homepage";
 import { MainContainer, MainContent, Footer, ServicesSection } from "../../templates/homepage/styles";
 import Hero from "../../molecules/hero/hero";
 import Header from "../../organisms/header/Header";
-import defaultCardImage from "../../../res/img/placeholders/400x100.png";
-import { Icon } from "react-icons-kit";
 import {
   basic_smartphone,
   basic_lightbulb,
@@ -68,13 +65,10 @@ export default class Home extends Component {
             <ServicesSection>
             <ul>              
               {this.getServices().map(service => {
-                //TODO: componentizar CARD
                 return (
                   <Card title={service.title} icon={service.icon}>
                     {service.description}
-                  </Card>
-    
-         
+                  </Card>         
                 );
               })}
             </ul>
