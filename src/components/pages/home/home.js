@@ -11,6 +11,7 @@ import {
   basic_webpage_img_txt
 } from "react-icons-kit/linea/";
 import { menuItems } from "../../organisms/header/menuItems";
+import Card from "../../molecules/card/card";
 
 export default class Home extends Component {
   getRandomImage() {
@@ -65,26 +66,15 @@ export default class Home extends Component {
           ></Hero>
           <MainContent>
             <ServicesSection>
-            <ul>
+            <ul>              
               {this.getServices().map(service => {
                 //TODO: componentizar CARD
                 return (
-                  <li>
-                    {/* <img
-                      src={defaultCardImage}
-                      alt={service.title}
-                      className="card-image"
-                    /> */}
-                    <div className="card-icon">
-                      <Icon icon={service.icon} size={52} />
-                    </div>
-                    <div>
-                      <a href="#" className="card-link">
-                        <h3 className="card-title">{service.title}</h3>
-                      </a>
-                      <p className="description">{service.description}</p>
-                    </div>
-                  </li>
+                  <Card title={service.title} icon={service.icon}>
+                    {service.description}
+                  </Card>
+    
+         
                 );
               })}
             </ul>
