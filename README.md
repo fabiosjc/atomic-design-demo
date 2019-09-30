@@ -1,5 +1,3 @@
-Project using react, atomic-desing and styled-components to create reusable components.
-
 ## Quick Start
 
 ```
