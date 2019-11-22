@@ -1,3 +1,7 @@
+## Results
+- Storybook: https://atomic-storybook.netlify.com/
+- Demo: https://atomic-demo.netlify.com/
+
 ## Quick Start
 
 ```
@@ -21,7 +25,8 @@ Open [http://localhost:9009]
 > `npm run start`
 
 ## TODO
-
+- Mobile version
 - Create footer component
 - Create Service, Work, Blog and Contact Pages
 - Route menu items to corresponding pages
+- Animations
